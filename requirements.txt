@@ -4,4 +4,5 @@ nltk==3.9.1
 scikit-learn==1.5.1
 numpy==1.26.4
 pandas==2.2.2
-gunicorn
+gunicorn==21.2.0
+
