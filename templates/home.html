@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Result - Kindle Review Sentiment</title>
+    <style>
+      body{font-family: Arial, Helvetica, sans-serif; max-width:800px;margin:40px auto}
+      .card{border:1px solid #ddd;padding:18px;border-radius:6px}
+      .positive{color:green}
+      .negative{color:red}
+    </style>
+  </head>
+  <body>
+    <h1>Result</h1>
+    {% if error %}
+      <p style="color:red">{{ error }}</p>
+    {% else %}
+      <div class="card">
+        <p><strong>Review:</strong></p>
+        <p>{{ review }}</p>
+        <p><strong>Predicted label:</strong>
+        {% if label == 1 %}
+          <span class="positive">Positive (1)</span>
+        {% elif label == 0 %}
+          <span class="negative">Negative (0)</span>
+        {% else %}
+          <span>{{ label }}</span>
+        {% endif %}
+        </p>
+        {% if prob is not none %}
+          <p><strong>Confidence:</strong> {{ '%.3f'|format(prob) }}</p>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <p style="margin-top:18px"><a href="/">Classify another review</a></p>
+  </body>
+</html>
