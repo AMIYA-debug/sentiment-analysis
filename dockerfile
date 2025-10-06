@@ -19,5 +19,6 @@ RUN pip install --no-cache-dir --prefer-binary -r requirements.txt
 
 COPY . .
 
-CMD ["python", "app.py"]
+CMD  ["gunicorn", "-w", "1", "-b", "0.0.0.0:8000", "app:app"]
+
 
