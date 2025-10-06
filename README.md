@@ -1,6 +1,6 @@
-# Kindle Review Sentiment Flask App
+#  Review Sentiment Flask App
 
-This small Flask app serves a web page that classifies a Kindle review as positive (1) or negative (0) using the preprocessing pipeline from the project's notebook and the saved model/vectoriser.
+This small Flask app serves a web page that classifies a  review as positive (1) or negative (0) using the preprocessing pipeline from the project's notebook and the saved model/vectoriser.
 
 Files added
 
